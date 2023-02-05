@@ -5,8 +5,10 @@
     android:layout_width="match_parent"
     android:background="@color/dark_purple"
     android:layout_height="match_parent"
+    android:background="@color/dark_purple"
     tools:context=".ui.MainActivity">
 
+<<<<<<< HEAD
 
 
     <androidx.recyclerview.widget.RecyclerView
@@ -20,5 +22,7 @@
         tools:itemCount="3"
         tools:listitem="@layout/list_item_matches" />
 
+=======
+>>>>>>> 3a4b1c70ef8fbe33e44f0903cf801b27a1aab9c2
 
 </androidx.constraintlayout.widget.ConstraintLayout>
