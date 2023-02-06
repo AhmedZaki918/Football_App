@@ -13,7 +13,7 @@ class MainRepo @Inject constructor(
 ) : SafeApiCall {
 
     suspend fun getMatchesList() = safeApiCall {
-        api.getMatches(API_KEY, "2023-02-01", "2023-02-05")
+        api.getMatches(API_KEY, "2023-02-05", "2023-02-12")
     }
 
     // Save all matches list to show it (in failure connection from server)

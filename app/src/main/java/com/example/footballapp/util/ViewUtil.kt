@@ -3,7 +3,8 @@ package com.example.footballapp.util
 import android.content.Context
 import android.content.Intent
 import android.os.Parcelable
-import android.view.View.*
+import android.view.View.GONE
+import android.view.View.VISIBLE
 import android.widget.ProgressBar
 import android.widget.Toast
 import com.example.footballapp.R
@@ -28,11 +29,11 @@ fun <T> Context.startActivity(cls: Class<T>, key: String = "", value: Any = "") 
 }
 
 
-fun Context.toast(message: String?){
-    Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
+fun Context.toast(message: String?,duration: Int){
+    Toast.makeText(this, message, duration).show()
 }
-fun Context.toast(message:Int?){
-    Toast.makeText(this, message.toString(), Toast.LENGTH_SHORT).show()
+fun Context.toast(message:Int?, duration: Int){
+    Toast.makeText(this, message.toString(), duration).show()
 }
 
 
@@ -48,9 +49,9 @@ fun Context.handleApiError(
     failure: Resource.Failure
 ) {
     when {
-        failure.isNetworkError -> toast(getString(R.string.connection_error))
-        failure.errorCode == 404 -> toast(getString(R.string.not_found))
-        failure.errorCode == 422 -> toast(getString(R.string.invalid_auth))
-        else -> toast(getString(R.string.not_found))
+        failure.isNetworkError -> toast(getString(R.string.connection_error),Toast.LENGTH_SHORT)
+        failure.errorCode == 404 -> toast(getString(R.string.not_found),Toast.LENGTH_SHORT)
+        failure.errorCode == 422 -> toast(getString(R.string.invalid_auth),Toast.LENGTH_SHORT)
+        else -> toast(getString(R.string.not_found),Toast.LENGTH_SHORT)
     }
 }

@@ -10,5 +10,7 @@
     <string name="status_not_start">NOT START</string>
     <string name="started_at">Started At </string>
     <string name="start_at">Start At</string>
+    <string name="caption_no_data">This\'s the first time you\'ve opened the app, Because of that there\'s no data has been saved for offline content.</string>
+    <string name="offline">You are offline</string>
 
 </resources>
