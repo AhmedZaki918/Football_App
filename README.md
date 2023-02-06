@@ -22,14 +22,15 @@ Sample app that displays information about the English Premier League.
 - MVVM
 
 #### Libraries:
-- Retrofit  2.9.0 (https://square.github.io/retrofit/)
-- Gson      2.9.6 (https://github.com/google/gson)
-- Room      2.5.0 (https://developer.android.com/training/data-storage/room)
-- Coil      1.4.0 (https://coil-kt.github.io/coil/)
-- Coroutine 1.6.4 (https://developer.android.com/kotlin/coroutines)
-- Hilt      2.44 (https://developer.android.com/training/dependency-injection/hilt-android)
-- ViewModel 2.6.0-alpha05 (https://developer.android.com/jetpack/androidx/releases/lifecycle)
-- LiveData  2.6.0-alpha05 (https://developer.android.com/jetpack/androidx/releases/lifecycle)
+- Retrofit         2.9.0 (https://square.github.io/retrofit/)
+- Gson             2.9.6 (https://github.com/google/gson)
+- Room             2.5.0 (https://developer.android.com/training/data-storage/room)
+- Coil             1.4.0 (https://coil-kt.github.io/coil/)
+- Coroutine        1.6.4 (https://developer.android.com/kotlin/coroutines)
+- Hilt             2.44 (https://developer.android.com/training/dependency-injection/hilt-android)
+- ViewModel        2.6.0-alpha05 (https://developer.android.com/jetpack/androidx/releases/lifecycle)
+- LiveData         2.6.0-alpha05 (https://developer.android.com/jetpack/androidx/releases/lifecycle)
+- SplashScreen     1.0.0 (https://developer.android.com/develop/ui/views/launch/splash-screen/migrate)  
 
 ## Setup
 
