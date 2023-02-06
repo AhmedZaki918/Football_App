@@ -1,7 +1,10 @@
 package com.example.footballapp.data.local
 
 import androidx.room.TypeConverter
-import com.example.footballapp.data.model.*
+import com.example.footballapp.data.model.AwayTeam
+import com.example.footballapp.data.model.Competition
+import com.example.footballapp.data.model.HomeTeam
+import com.example.footballapp.data.model.Score
 import com.google.gson.Gson
 
 

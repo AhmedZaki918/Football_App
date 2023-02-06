@@ -13,16 +13,19 @@
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
-        android:theme="@style/Theme.FootballApp"
+        android:theme="@style/Theme.App.Starting"
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
+            android:theme="@style/Theme.FootballApp"
             android:name=".ui.online.OnlineActivity"
             android:exported="false" />
         <activity
+            android:theme="@style/Theme.FootballApp"
             android:name=".ui.offline.OfflineActivity"
             android:exported="false" />
         <activity
+            android:theme="@style/Theme.App.Starting"
             android:name=".ui.MainActivity"
             android:exported="true">
             <intent-filter>

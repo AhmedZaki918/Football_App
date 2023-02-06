@@ -2,13 +2,13 @@ package com.example.footballapp.ui
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import com.example.footballapp.databinding.ActivityMainBinding
 import com.example.footballapp.ui.offline.OfflineActivity
 import com.example.footballapp.ui.online.OnlineActivity
 import com.example.footballapp.util.Coroutines
 import com.example.footballapp.util.NetworkConnection
 import com.example.footballapp.util.startActivity
-import com.example.footballapp.util.toast
 import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
 
@@ -22,6 +22,7 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        installSplashScreen()
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 

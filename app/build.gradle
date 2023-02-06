@@ -74,4 +74,7 @@ dependencies {
     implementation "androidx.room:room-runtime:$room"
     kapt "androidx.room:room-compiler:$room"
     implementation "androidx.room:room-ktx:$room"
+
+    // SplashScreen
+    implementation 'androidx.core:core-splashscreen:1.0.0'
 }
