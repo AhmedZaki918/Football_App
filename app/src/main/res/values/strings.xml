@@ -5,6 +5,10 @@
     <string name="invalid_auth">The given data was invalid.</string>
     <string name="not_found">Sorry, something went wrong</string>
     <string name="connection_error">Please check your internet connection</string>
-    <string name="status_not_start">"NOT START"</string>
+
+    <!-- Main screen   -->
+    <string name="status_not_start">NOT START</string>
+    <string name="started_at">Started At </string>
+    <string name="start_at">Start At</string>
 
 </resources>

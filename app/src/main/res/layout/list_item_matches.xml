@@ -2,6 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/parent_view"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
@@ -46,7 +47,7 @@
 
             <!-- Match time -->
             <TextView
-                android:id="@+id/tv_match_time"
+                android:id="@+id/tv_match_in_day"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
@@ -63,66 +64,32 @@
                 android:layout_height="wrap_content"
                 android:text="_"
                 android:textColor="@color/white"
-                app:layout_constraintEnd_toEndOf="@+id/tv_match_time"
-                app:layout_constraintStart_toStartOf="@+id/tv_match_time"
-<<<<<<< HEAD
-                app:layout_constraintTop_toBottomOf="@+id/tv_match_time" />
-=======
-                app:layout_constraintTop_toBottomOf="@+id/tv_match_time"
-                tools:ignore="HardcodedText" />
->>>>>>> 3a4b1c70ef8fbe33e44f0903cf801b27a1aab9c2
+                app:layout_constraintEnd_toEndOf="@+id/tv_match_in_day"
+                app:layout_constraintStart_toStartOf="@+id/tv_match_in_day"
+                app:layout_constraintTop_toBottomOf="@+id/tv_match_in_day" />
 
             <!--  Home score -->
             <TextView
                 android:id="@+id/tv_home_score"
-<<<<<<< HEAD
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="2dp"
-                android:layout_marginEnd="8dp"
-                android:textColor="@color/white"
-                android:textSize="22sp"
-                android:textStyle="bold"
-=======
                 style="@style/Score"
                 android:layout_marginEnd="8dp"
->>>>>>> 3a4b1c70ef8fbe33e44f0903cf801b27a1aab9c2
                 app:layout_constraintEnd_toStartOf="@+id/tv_dash"
-                app:layout_constraintTop_toBottomOf="@+id/tv_match_time"
+                app:layout_constraintTop_toBottomOf="@+id/tv_match_in_day"
                 tools:text="0" />
 
             <!--  Away score -->
             <TextView
                 android:id="@+id/tv_away_score"
-<<<<<<< HEAD
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="2dp"
-                android:textColor="@color/white"
-                android:textSize="22sp"
-                android:textStyle="bold"
-=======
                 style="@style/Score"
                 android:layout_marginStart="8dp"
->>>>>>> 3a4b1c70ef8fbe33e44f0903cf801b27a1aab9c2
                 app:layout_constraintStart_toEndOf="@+id/tv_dash"
-                app:layout_constraintTop_toBottomOf="@+id/tv_match_time"
+                app:layout_constraintTop_toBottomOf="@+id/tv_match_in_day"
                 tools:text="2" />
 
             <!--  Home team -->
             <TextView
                 android:id="@+id/tv_home_team"
-<<<<<<< HEAD
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:textColor="@color/light_pink"
-                android:textSize="16sp"
-                android:textStyle="bold"
-=======
                 style="@style/TeamName"
->>>>>>> 3a4b1c70ef8fbe33e44f0903cf801b27a1aab9c2
                 app:layout_constraintEnd_toStartOf="@+id/tv_home_score"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="@+id/tv_home_score"
@@ -132,25 +99,16 @@
             <!--  Away team -->
             <TextView
                 android:id="@+id/tv_away_team"
-<<<<<<< HEAD
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:textColor="@color/light_pink"
-                android:textSize="16sp"
-                android:textStyle="bold"
-=======
                 style="@style/TeamName"
->>>>>>> 3a4b1c70ef8fbe33e44f0903cf801b27a1aab9c2
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/tv_away_score"
                 app:layout_constraintTop_toTopOf="@+id/tv_away_score"
                 app:layout_constraintWidth_percent="0.3"
                 tools:text="Arsenal" />
 
-            <!-- Current match status -->
+            <!-- Match time -->
             <TextView
-                android:id="@+id/tv_current_status"
+                android:id="@+id/tv_match_time"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
@@ -161,10 +119,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/tv_home_score"
                 tools:text="Started At 17:00 PM" />
 
-<<<<<<< HEAD
 
-=======
->>>>>>> 3a4b1c70ef8fbe33e44f0903cf801b27a1aab9c2
             <!-- Line -->
             <View
                 android:id="@+id/view"
@@ -177,7 +132,7 @@
                 android:background="@android:color/darker_gray"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tv_current_status" />
+                app:layout_constraintTop_toBottomOf="@+id/tv_match_time" />
 
             <!-- Competition name -->
             <TextView
@@ -192,10 +147,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/view"
                 tools:text="Premier League" />
 
-<<<<<<< HEAD
 
-=======
->>>>>>> 3a4b1c70ef8fbe33e44f0903cf801b27a1aab9c2
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.cardview.widget.CardView>

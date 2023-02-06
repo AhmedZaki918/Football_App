@@ -3,8 +3,7 @@ package com.example.footballapp.util
 import android.content.Context
 import android.content.Intent
 import android.os.Parcelable
-import android.view.View.INVISIBLE
-import android.view.View.VISIBLE
+import android.view.View.*
 import android.widget.ProgressBar
 import android.widget.Toast
 import com.example.footballapp.R
@@ -38,7 +37,7 @@ fun Context.toast(message:Int?){
 
 
 fun ProgressBar.hide() {
-    visibility = INVISIBLE
+    visibility = GONE
 }
 fun ProgressBar.show() {
     visibility = VISIBLE

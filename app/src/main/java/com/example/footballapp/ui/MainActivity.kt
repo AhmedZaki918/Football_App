@@ -2,21 +2,21 @@ package com.example.footballapp.ui
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import androidx.lifecycle.ViewModelProvider
-import com.example.footballapp.data.network.Resource
 import com.example.footballapp.databinding.ActivityMainBinding
-import com.example.footballapp.ui.adapter.MainAdapter
+import com.example.footballapp.ui.offline.OfflineActivity
+import com.example.footballapp.ui.online.OnlineActivity
 import com.example.footballapp.util.Coroutines
-import com.example.footballapp.util.handleApiError
-import com.example.footballapp.util.toast
+import com.example.footballapp.util.NetworkConnection
+import com.example.footballapp.util.startActivity
 import dagger.hilt.android.AndroidEntryPoint
-import kotlinx.coroutines.flow.collectLatest
+import javax.inject.Inject
 
 @AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
 
+    @Inject
+    lateinit var networkConnection: NetworkConnection
     private lateinit var binding: ActivityMainBinding
-    private lateinit var viewModel: MainViewModel
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -24,18 +24,17 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        viewModel = ViewModelProvider(this)[MainViewModel::class.java]
-        viewModel.initMatchesList()
-
-
-        Coroutines.main {
-            viewModel.matchesResponse.collectLatest { response ->
-                   if (response is Resource.Success) {
-                       val mainAdapter = response.value.matches?.let { MainAdapter(it) }
-                       binding.recyclerView.adapter = mainAdapter
-                    } else if (response is Resource.Failure) {
-                        handleApiError(response)
-                }
+        // If there's a network available
+        networkConnection.registerNetworkCallback()
+        Coroutines.background {
+            if (networkConnection.isConnected) {
+                // Display online content
+                startActivity(OnlineActivity::class.java)
+                finish()
+            } else {
+                // Display offline content
+                startActivity(OfflineActivity::class.java)
+                finish()
             }
         }
     }
